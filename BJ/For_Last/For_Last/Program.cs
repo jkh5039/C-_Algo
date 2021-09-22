@@ -7,7 +7,7 @@ namespace For_Last
     {
         static void Main(string[] args)
         {
-            //나도 몰라 ^^l
+            //나도 몰라 ^^lqk
         }
     }
 }
