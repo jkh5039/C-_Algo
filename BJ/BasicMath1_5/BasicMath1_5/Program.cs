@@ -18,27 +18,23 @@ namespace BasicMath1_5
                 int customer = int.Parse(Hotel[2]);
 
                 //층수 알려준다
-                int Layer = customer % H;
-                
-
+                int layer = customer % H;              
                 int room = customer / H;
                 room += 1;
-                if (Layer == 0)
+                if (layer == 0)
                 {
-                    //제일 꼭대기층 
-                    Layer = H;
+                    //제일 꼭대기층 일때
+                    layer = H;
                     room -= 1;
                 }
-                string Layer1 =Layer.ToString();
-                string room1 = room.ToString("D2");
-                
+                string layer1 =layer.ToString();
+                string room1 = room.ToString("D2");               
 
-                Console.WriteLine(Layer1+room1);
-            }
-            
-            
-            
-
+                Console.WriteLine(layer1+room1);
+            }        
         }
     }
 }
+            
+            
+
