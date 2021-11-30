@@ -29,7 +29,7 @@ namespace bruteForce_1
 
                 }
                 sum += others;
-                //N값 바꾼다
+                
                 i = realI;
 
                 //sum값이 N과 같으면 나간다
