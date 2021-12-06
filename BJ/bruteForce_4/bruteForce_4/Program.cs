@@ -15,12 +15,17 @@ namespace bruteForce_4
 
 
             //cards.Length...moji,,, 
-            for (int i = 0; i < cards.Length-2; i++)
+            for (int i = 0; i < cards.Length-2; i++) //3번째
             {
-                for(int j=0; j < cards.Length-1; j++)
+                for(int j=0; j < cards.Length-1; j++) //2번째
                 {
-                    for(int k=0; k < cards.Length; k++)
+                    for(int k=0; k < cards.Length; k++) //1번째
                     {
+                        if(int.Parse(cards[i]+ cards[j]+ cards[k]) == maximum)
+                        {
+                            Console.WriteLine(maximum);
+                            return;
+                        }
 
                     }
                 }
