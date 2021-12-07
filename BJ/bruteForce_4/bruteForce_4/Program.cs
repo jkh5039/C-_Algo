@@ -27,9 +27,21 @@ namespace bruteForce_4
                             return;
                         }
 
+                        if(int.Parse(cards[i] + cards[j] + cards[k]) >maximum)
+                        {
+                            continue;
+                        }
+
+                        //?
+                        if(int.Parse(cards[i] + cards[j] + cards[k]) < maximum)
+                        {
+                            result = int.Parse(cards[i] + cards[j] + cards[k]);
+                        }
                     }
                 }
             }
+
+            
         }
     }
 }
