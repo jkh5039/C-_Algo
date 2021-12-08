@@ -9,39 +9,52 @@ namespace bruteForce_4
             string[] N = Console.ReadLine().Split();
             int x = int.Parse(N[0]);
             int maximum = int.Parse(N[1]);
-            int points = 0;
+
+            
             int result = 0;
             string[] cards = Console.ReadLine().Split();
 
 
-            //cards.Length...moji,,, 
-            for (int i = 0; i < cards.Length-2; i++) //3번째
+            //cards.Length.. 
+            for (int i = 0; i < cards.Length - 2; i++) 
             {
-                for(int j=0; j < cards.Length-1; j++) //2번째
+                for (int j = i + 1; j < cards.Length - 1; j++) 
                 {
-                    for(int k=0; k < cards.Length; k++) //1번째
+                    for (int k = j + 1; k < cards.Length; k++) 
                     {
-                        if(int.Parse(cards[i]+ cards[j]+ cards[k]) == maximum)
+                        int sum = int.Parse(cards[i]) + int.Parse(cards[j])+
+                            int.Parse(cards[k]);
+                        
+                        //equal
+                        if (sum == maximum)
                         {
                             Console.WriteLine(maximum);
                             return;
                         }
 
-                        if(int.Parse(cards[i] + cards[j] + cards[k]) >maximum)
+
+                        //over
+                        if (sum > maximum)
                         {
                             continue;
                         }
 
-                        //?
-                        if(int.Parse(cards[i] + cards[j] + cards[k]) < maximum)
+
+
+                        //less                        
+                        if (sum < maximum)
                         {
-                            result = int.Parse(cards[i] + cards[j] + cards[k]);
+                            if(sum>result)
+                                result = sum;
+                            
                         }
                     }
                 }
             }
-
-            
+            Console.WriteLine(result);
         }
+
+        
+
     }
 }
