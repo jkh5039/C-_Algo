@@ -27,10 +27,18 @@ namespace Sort_8
             {
                 Console.WriteLine(words[p]);
             }
+            // words 중복 제거
+
+            // -> 11개
+            //while(wordSort.Count != words)
+            //{
+            //    if (asdf)
+            //        wordSort.Add();
+            //}
 
             while (wordSort.Count== T)
             {
-                //Console.WriteLine("while들어감");
+                Console.WriteLine("while들어감");
 
                 for (int j = 0; j < T; j++)
                 {
