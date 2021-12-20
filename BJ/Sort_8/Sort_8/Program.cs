@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Sort_8
 {
     class Program
@@ -18,12 +21,14 @@ namespace Sort_8
                 string X = Console.ReadLine();
                 words[i] = X;
             }
-                       
+
+
+            Console.WriteLine("-------------------");
 
             //알파벳순서대로 정렬
             Array.Sort(words);
 
-            for(int p = 0; p < T; p++)
+            for (int p = 0; p < T; p++)
             {
                 Console.WriteLine(words[p]);
             }
@@ -52,7 +57,7 @@ namespace Sort_8
                 len++;
             }
 
-            Console.WriteLine(wordSort.Count);
+            //Console.WriteLine(wordSort.Count);
             //for(int k = 0; k < T; k++)
             //{
             //    Console.WriteLine(wordSort[k]);
